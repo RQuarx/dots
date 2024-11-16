@@ -1,0 +1,158 @@
+{
+    "custom/separator": {
+        "format": "  ",
+        "tooltip": false
+    },
+
+    "custom/open": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/close": {
+        "format": " ",
+        "tooltip": false
+    },
+
+
+
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+
+    "modules-left": ["hyprland/workspaces", "tray", "wlr/taskbar"],
+    "modules-center": ["custom/open", "custom/weather", "mpris", "clock", "custom/close"],
+    "modules-right": ["temperature", "network", "pulseaudio" ,"memory", "battery"],
+
+
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "α",
+            "2": "β",
+            "3": "γ",
+            "4": "δ",
+            "5": "ε"
+        },
+
+        "persistent-workspaces": {
+            "*": 5
+        },
+
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": ["Alacritty", "kitty", "zoom", "zoom workplace"]
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "rewrite": {
+            "Alacritty": " ",
+            "(.*) - Vivaldi": "Vivaldi",
+            "": "None",
+            "(.*) Mozilla Firefox": "Firefox"
+        }
+    },
+
+
+
+    "custom/weather": {
+        "exec": "python ~/.config/waybar/scripts/weather/weather.py",
+        "restart-interval": 30,
+        "return-type": "json",
+        "on-click": "xdg-open https://weather.com/en-EN/weather/today/l/$(location_id)"
+        // "format-alt": "{alt}",
+    },
+
+    "clock": {
+        "interval": 60,
+        "tooltip": false,
+        "format": "{:%a %e %b %I:%M %p}",
+        "on-click": "ags -t calendar"
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "mpris": {
+        "format": "{title}",
+        "title-len": 25,
+        "format-paused": "{status_icon} <i>{title}</i>",
+        "status-icons": {
+            "paused": " ",
+            "playing": " ",
+            "stopped": " "
+        },
+        "ignored-players": ["Vivaldi", "zoom"]
+    },
+
+
+    
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+   
+    "network": {
+        "interface": "wlan0",
+        "format": "    {essid}",
+        "format-disconnected": "Disconnected", //An empty format will hide the module.
+        "tooltip-format": "{signalStrength}%",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 1,
+        "max-length": 25
+    },
+
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-bluetooth-muted": "   muted",
+        "format-muted": "   muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "   {percentage}%"
+    },
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 40,
+            "critical": 20
+        },
+        "format": "{icon}   {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25,
+        "tooltip": false
+    }
+}
