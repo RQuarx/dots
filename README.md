@@ -1,9 +1,9 @@
 # Personal Config Files
 
 ## System Information
-OS: Arch Linux
-RAM: 8 GB
-Storage: 512 GB
+- **OS**: *Arch Linux*
+- **RAM**: *8 GB*
+- **Storage**: *512 GB*
 
 ## Screenshots
 
