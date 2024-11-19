@@ -9,7 +9,9 @@
 
 ### Firefox
 
-https://github.com/RQuarx/dots/blob/main/src/videos/Firefox-preview.mp4
+
+<https://github.com/RQuarx/dots/blob/main/src/videos/Firefox-preview.mp4>
+
 
 ### Fastfetch and zsh prompt
 ![](../main/src/images/Fastfetch-zsh-prompt.png)
