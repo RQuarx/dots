@@ -8,10 +8,10 @@
 ## Screenshots
 
 Tabbed windows, with Firefox opened on the side
-![](../main/images/Tabbed-terminal-firefox.png)
+![](../main/src/Tabbed-terminal-firefox.png)
 
 Rofi with btop
-![](../main/images/Rofi-btop.png)
+![](../main/src/Rofi-btop.png)
 
 ## Dependencies
 
