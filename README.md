@@ -19,6 +19,6 @@ Rofi with btop
 - [waybar animation from ML4W](https://github.com/mylinuxforwork/dotfiles/)
 
 ### Todo
-1, Add more screenshots
-2, Wallpaper image
-3, Cosmic settings?
+1. Add more screenshots
+2. Wallpaper image
+3. Cosmic settings?
