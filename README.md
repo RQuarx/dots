@@ -15,8 +15,7 @@ Rofi with btop
 
 ## Installation
 1. Install required dependencies (Hyprland, alacritty, rofi, ...)
-
-```# pacman -S Hyprland alacritty rofi-wayland ...```
+- `# pacman -S Hyprland alacritty rofi-wayland ...`
 2. Install Hyprland plugin: [](https://github.com/outfoxxed/hy3)
 3. Use your system
 
