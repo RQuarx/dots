@@ -8,6 +8,7 @@
 ## Previews
 
 ### Firefox
+
 https://github.com/RQuarx/dots/blob/main/src/videos/Firefox-preview.mp4
 
 ### Fastfetch and zsh prompt
