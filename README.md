@@ -32,6 +32,5 @@ Rofi with btop
 
 ### Todo
 1. Add more screenshots
-2. Wallpaper image
 3. Greeter config
 4. Cosmic settings?
