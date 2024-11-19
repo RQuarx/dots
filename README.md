@@ -13,9 +13,15 @@ Tabbed windows, with Firefox opened on the side
 Rofi with btop
 ![](../main/images/Rofi-btop.png)
 
+## Dependencies
+
+Arch's main repository\
+`fastfetch zsh firefox btop waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot`\
+AUR\
+`hyprlauncher`
+
 ## Installation
-1. Install required dependencies (Hyprland, alacritty, rofi, ...)
-- `# pacman -S Hyprland alacritty rofi-wayland ...`
+1. Install required dependencies
 2. Install Hyprland plugin: [hy3](https://github.com/outfoxxed/hy3)
 3. Use your system
 
