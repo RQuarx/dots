@@ -1,0 +1,25 @@
+#urlbar {
+  text-align: center;
+}
+
+#urlbar-background {
+  background-color: transparent !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+.urlbarView {
+  padding-top: 15px;
+  text-align: start;
+  margin-top: 4px;
+  background-color: rgba(14, 14, 14, 0.5);
+  border: var(--border-width) solid var(--accent) !important;
+  border-radius: 0px 0px 15px 15px;
+}
+.urlbarView-body-inner {
+  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+    border-top: unset !important;
+  }
+}
+.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
+  border-top: var(--border-width) solid var(--accent) !important;
+}
