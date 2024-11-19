@@ -15,9 +15,9 @@ Rofi with btop
 
 ## Dependencies
 
-### Arch's main repository\
-`fastfetch zsh firefox btop waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot`\
-### AUR\
+### Arch's main repository
+`fastfetch zsh firefox btop waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot`
+### AUR
 `hyprlauncher`
 
 ## Installation
