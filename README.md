@@ -5,18 +5,24 @@
 - **RAM**: *8 GB*
 - **Storage**: *512 GB*
 
-## Screenshots
+## Previews
 
-Tabbed windows, with Firefox opened on the side
-![](../main/src/images/Tabbed-terminal-firefox.png)
+### Firefox
+![](../main/src/videos/Firefox-preview.mp4)
 
-Rofi with btop
-![](../main/src/images/Rofi-btop.png)
+### Fastfetch and zsh prompt
+![](../main/src/images/Fastfetch-zsh-prompt.png)
+
+## Hyprlauncher
+![](../main/src/images/Hyprlauncher.png)
+
+### Tabbed windows
+![](../main/src/images/Tabbed-windows.png)
 
 ## Dependencies
 
 ### Arch's main repository
-`fastfetch zsh firefox btop waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot`
+`fastfetch zsh firefox btop waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot greed-tuigreed`
 ### AUR
 `hyprlauncher`
 
@@ -31,6 +37,4 @@ Rofi with btop
 - [waybar animation from ML4W](https://github.com/mylinuxforwork/dotfiles/)
 
 ### Todo
-1. Add more screenshots
-3. Greeter config
-4. Cosmic settings?
+1. Cosmic settings?
