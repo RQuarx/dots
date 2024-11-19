@@ -17,3 +17,8 @@ Rofi with btop
 - [textfox (I modified the code a "little" bit)](https://github.com/adriankarlen/textfox)
 - [a way to autohide the sidebar](https://github.com/MrOtherGuy/firefox-csshacks/blob/36be28e7d26e53d0c098691acb3b7633bb3840b5/chrome/autohide_sidebar.css)
 - [waybar animation from ML4W](https://github.com/mylinuxforwork/dotfiles/)
+
+### Todo
+1, Add more screenshots
+2, Wallpaper image
+3, Cosmic settings?
