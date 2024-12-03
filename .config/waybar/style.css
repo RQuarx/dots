@@ -3,9 +3,11 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.3);
+    background: #14181C;
     box-shadow: inset 0px -1px cyan;
     border-radius: 0;
+    transition-property: all;
+    transition-duration: .3s;
 }
 .modules-left {
     margin-bottom: 5px;
@@ -54,11 +56,6 @@ button:hover {
     background: #404b5b;
 }
 
-#custom-separator {
-    color: #ccc;
-    background: transparent;
-}
-
 #workspaces {
     font-family: "OpenSans";
     padding: 0px 13px 0px 7px;
@@ -72,7 +69,9 @@ button:hover {
     transition: all .3s ease-in-out;
 }
 #workspaces button.active {
-    background-color: #404b5b;
+    /* background-color: #404b5b; */
+    border: #00ffff solid;
+    border-width: 0px 1px 0px 1px;
     color: #fff;
     min-width: 35px;
 }
@@ -147,7 +146,7 @@ button:hover {
 }
 
 #custom-separator {
-    color: #ccc;
+    color: #0ff;
     background: transparent;
 }
 

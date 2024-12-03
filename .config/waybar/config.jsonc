@@ -97,8 +97,7 @@
         "tooltip-format": "{signalStrength}%",
         "tooltip-format-disconnected": "Disconnected",
         "interval": 1,
-        "max-length": 25,
-        "on-click-right": "bash ~/.config/rofi/wifi_menu/rofi_wifi_menu"
+        "max-length": 25
     },
 
     "pulseaudio": {

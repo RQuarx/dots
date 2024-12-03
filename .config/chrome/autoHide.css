@@ -5,7 +5,7 @@ See the above repository for updates as well as full license text. */
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar-box{
-  --uc-sidebar-width: 40px;
+  --uc-sidebar-width: 34px;
   --uc-sidebar-hover-width: 300px;
   --uc-autohide-sidebar-delay: 300ms; /* Wait 0.3s before hiding sidebar */
   --uc-autohide-transition-duration: .5s;
@@ -83,5 +83,5 @@ See the above repository for updates as well as full license text. */
 
 #sidebar-box {
   border-radius: 15px;
-  margin: 8px;
+  margin: 8px 2px 8px 8px;
 }

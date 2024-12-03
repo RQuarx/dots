@@ -1,6 +1,27 @@
+:root {   
+    & tabbox#tabbrowser-tabbox,
+    & #tabbrowser-tabpanels {
+        background-color: transparent !important;
+    }
+
+    &:not([inDOMFullscreen="true"], [sizemode="fullscreen"], [sizemode="maximized"], [chromehidden*="toolbar"], [chromehidden*="menubar"]) tabbox#tabbrowser-tabbox browser {
+        border-radius: 15px;
+        clip-path: circle(100%);
+        background-color: transparent !important;
+    }
+}
+
+#main-window > body {
+  border-radius: 15px !important
+}
+
+browser { 
+  border-radius: 15px !important; 
+} 
+
 #tabbrowser-tabbox {
   margin: 8px !important;
-  padding: 8px !important;
+  padding: 0px !important;
   border: var(--border-width) solid var(--border);
   border-radius: var(--rounding);
   transition: border-color var(--border-transition);
@@ -9,24 +30,6 @@
     border-color: var(--accent) !important;
   }
 }
-
-#contentAreaContextMenu {
-  border-radius: 15px !important;
-}
-
-#browserStack {
-  border-radius: 15px !important;
-}
-#browserContent {
-  border-radius: 15px !important;
-}
-
-/* #tabbrowser-tabpanels {
-  border-radius: 15px;
-  padding: 0px;
-  margin: 0px;
-  background-color: transparent;
-} */
 
 
 :root[inFullscreen="true"] {
