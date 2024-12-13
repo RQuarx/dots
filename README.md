@@ -5,27 +5,18 @@
 - **RAM**: *8 GB*
 - **Storage**: *512 GB*
 
-## Previews
+## Preview
 
-### Firefox
 
-https://github.com/user-attachments/assets/8957c54f-2e9d-4bc1-825f-64c9199d10fb
+https://github.com/user-attachments/assets/953c7f97-5302-4d2c-9d87-85b9b34248e7
 
-### Fastfetch and zsh prompt
-![](../main/src/images/Fastfetch-zsh-prompt.png)
 
-## Hyprlauncher
-![](../main/src/images/Hyprlauncher.png)
 
-### Tabbed windows
-![](../main/src/images/Tabbed-windows.png)
 
 ## Dependencies
 
 ### Arch's main repository
-`fastfetch zsh firefox btop waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot greed-tuigreed`
-### AUR
-`hyprlauncher`
+`fastfetch zsh firefox btop rofi waybar alacritty Hyprland hypridle hyprlock hyprpaper hyprpicker hyprutils hyprshot greed-tuigreed`
 
 ## Installation
 1. Install required dependencies
