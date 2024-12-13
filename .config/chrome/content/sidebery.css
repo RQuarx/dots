@@ -16,7 +16,7 @@ Styles for Sidebery extension
 
   /* consistent navbar background */
   #nav_bar {
-    background-color: #0e0e0e !important;
+    background-color: transparent !important;
   }
 
   /* padding */

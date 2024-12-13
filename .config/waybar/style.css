@@ -66,10 +66,9 @@ button:hover {
     color: #777;
     padding: 0px 5px 0px 5px;
     font-weight: bolder;
-    transition: all .3s ease-in-out;
+    transition: all .3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #workspaces button.active {
-    /* background-color: #404b5b; */
     border: #00ffff solid;
     border-width: 0px 1px 0px 1px;
     color: #fff;
@@ -165,7 +164,8 @@ button:hover {
 
 #battery {
     font-family: "JetBrainsMono Nerd Font";
-    background: #009900;
+    /* background: #009900; */
+    background: linear-gradient(90deg, #1addb0 0%, #00ffb1 80%);
     padding-left: 7px;
     padding-right: 7px;
     color: #0e0e0e;
@@ -179,4 +179,18 @@ button:hover {
 #battery.discharging.critical {
     background: #990000;
     color: #ffffff;
+}
+
+@keyframes blink {
+  to {
+    color: #b3b7bd;
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

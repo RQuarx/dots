@@ -28,7 +28,7 @@
   /* replace firefox logo */
   .logo-and-wordmark {
     .logo {
-      display: unset !important;
+      display: none !important;
     }
     .wordmark {
       background: unset !important;
@@ -46,6 +46,7 @@
   .search-wrapper {
     .search-handoff-button,
     input {
+      display: none;
       border: var(--width) solid var(--newtab-border-color) !important;
       border-radius: var(--rounding) !important;
       box-shadow: none !important;

@@ -1,17 +1,3 @@
-#sidebar-box {
-  /* padding: 10px; */
-  background: #0e0e0e;
-  margin: 8px;
-  border: var(--border-width) solid var(--border);
-  border-radius: var(--rounding);
-  transition: border-color var(--border-transition);
-  &:hover {
-    border-color: var(--accent) !important;
-  }
-  &:hover::before {
-    color: var(--accent);
-  }
-}
 
 #sidebar-header {
   display: none;
@@ -22,5 +8,19 @@
 }
 
 #sidebar {
+  background-color: transparent;
+  min-width: 34px !important;
+  border-radius: 0px;
+}
+#sidebar-box{
+  --uc-sidebar-width: 15.3em;
+  --browser-area-z-index-sidebar: 3;
+  position: relative;
+  min-width: var(--uc-sidebar-width) !important;
+  width: var(--uc-sidebar-width) !important;
+  max-width: var(--uc-sidebar-width) !important;
+  z-index: var(--browser-area-z-index-sidebar,3);
+  background: transparent;
+  margin: 8px 0px 8px 0px;
   border-radius: 15px;
 }

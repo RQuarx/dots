@@ -22,12 +22,11 @@ browser {
 #tabbrowser-tabbox {
   margin: 8px !important;
   padding: 0px !important;
-  border: var(--border-width) solid var(--border);
-  border-radius: var(--rounding);
-  transition: border-color var(--border-transition);
+  border: 2px solid #000;
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
   &:hover {
-    color: var(--accent);
-    border-color: var(--accent) !important;
+    border-color: #0ff;
   }
 }
 

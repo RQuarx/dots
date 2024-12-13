@@ -3,32 +3,43 @@
         "format": " ",
         "tooltip": false
     },
-
     "custom/close": {
         "format": " ",
         "tooltip": false
     },
-    
     "custom/separator": {
         "format": "|",
         "tooltip": false
     },
-
     "custom/separator-middle": {
         "format": "|",
         "tooltip": false
     },
-
     "layer": "top",
     "position": "top",
     "height": 29,
-
-    "modules-left": ["custom/updates", "custom/separator", "hyprland/workspaces"],
-    "modules-center": ["custom/open", "custom/weather", "custom/separator-middle", "hyprland/window", "custom/separator-middle", "clock", "custom/close"],
-    "modules-right": ["network", "custom/separator", "tray", "custom/separator", "pulseaudio", "battery"],
-
-
-
+    "modules-left": [
+        "custom/updates",
+        "custom/separator",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/open",
+        "custom/weather",
+        "custom/separator-middle",
+        "hyprland/window",
+        "custom/separator-middle",
+        "clock",
+        "custom/close"
+    ],
+    "modules-right": [
+        // "network",
+        // "custom/separator",
+        "tray",
+        "custom/separator",
+        "pulseaudio",
+        "battery"
+    ],
     "custom/updates": {
         "format": "{icon}",
         "return-type": "json",
@@ -39,7 +50,6 @@
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
     },
-
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -53,25 +63,19 @@
         "persistent-workspaces": {
             "*": 5
         },
-
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
-
     "tray": {
         "icon-size": 18,
         "spacing": 10
     },
-
-
-
     "custom/weather": {
         "exec": "python ~/.config/waybar/scripts/weather/weather.py",
         "restart-interval": 60,
         "return-type": "json",
         "on-click": "xdg-open https://weather.com/en-EN/weather/today/l/$(location_id)"
     },
-
     "hyprland/window": {
         "format": "{title}",
         "rewrite": {
@@ -79,7 +83,6 @@
             "": "-"
         }
     },
-
     "clock": {
         "interval": 60,
         "tooltip": false,
@@ -87,9 +90,6 @@
         "on-click": "ags -t calendar"
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-
-
-   
     "network": {
         "interface": "wlan0",
         "format": "  {essid}",
@@ -126,7 +126,13 @@
         "format": "{icon} {capacity}%",
         "format-plugged": " {capacity}%",
         "format-charging": " {capacity}%",
-        "format-icons": [" ", " ", " ", " ", " "],
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
         "max-length": 25,
         "tooltip": false
     }
