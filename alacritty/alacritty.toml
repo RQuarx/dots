@@ -1,0 +1,43 @@
+general.import = ["colours.toml"]
+
+[window]
+
+title = "Alacritty"
+dynamic_title = false
+
+opacity = 0.5
+
+padding.x = 5
+padding.y = 5
+
+decorations = "None"
+
+[font]
+
+normal.family = "JetBrainsMono Nerd Font"
+
+size = 10.0
+
+[cursor]
+
+blink_interval = 600
+unfocused_hollow = true
+
+[cursor.style]
+
+shape = "Beam"
+blinking = "Always"
+
+[mouse]
+
+hide_when_typing = true
+
+[keyboard]
+
+bindings = [{ key = "N", mods = "Control", action = "CreateNewWindow" }]
+
+[bell]
+
+animation = "EaseOutExpo"
+duration = 0
+

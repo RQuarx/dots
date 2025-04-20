@@ -1,0 +1,66 @@
+@import "~/.config/rofi/colour.rasi"
+
+
+window {
+    background-color: @background;
+    children: [ inputbar, listview ];
+    border-color: @accent;
+    border: 0px 0px 1px 0px solid;
+
+    orientation: horizontal;
+    location: north;
+    padding: 0px;
+    // height: 21px;
+    width: 100%;
+}
+
+
+inputbar {
+    children: [ prompt, entry ];
+
+    background-color: @alt-background;
+    border-radius: 5px;
+    padding: 0px 7px;
+    margin: 3px;
+}
+prompt {
+    color: @accent;
+}
+entry {
+    width: 7%;
+    cursor-width: 1px;
+    cursor-color: @accent;
+    placeholder: "search";
+}
+
+
+listview {
+    scrollbar: false;
+    layout: horizontal;
+    flow: horizontal;
+    border: 0px;
+    background-color: @alt-background;
+    border-radius: 5px;
+    padding: 0px 7px;
+    margin: 3px;
+}
+element {
+    text-color: @foreground;
+    margin: 0px 8px;
+}
+
+element normal.normal,
+element normal.active,
+element alternate.active,
+element alternate.normal {
+    color: @alt-foreground;
+    background-color: @alt-background;
+    highlight: underline white;
+}
+element selected.active,
+element selected.normal {
+    text-color: @foreground;
+    background-color: @alt-background;
+    border-color: @accent;
+    highlight: underline cyan;
+}

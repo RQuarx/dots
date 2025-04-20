@@ -1,0 +1,18 @@
+configuration {
+	modes:						[ drun, window, run ];
+    display-drun:               "drun    ";
+    display-run:               	"run     ";
+    display-window:             "window  ";
+	drun-display-format:        "{name}";
+	window-format:              "{c}: {t}";
+	scroll-method: 				1;
+	font: 						"JetBrainsMono Nerd Font 10";
+	terminal:					"alacritty";
+	dpi:						0;
+	threads:					8;
+	scale:						1;
+}
+
+@import "~/.config/rofi/lineV2.rasi"
+// @import "~/.config/rofi/line.rasi"
+// @import "~/.config/rofi/sidebar.rasi"

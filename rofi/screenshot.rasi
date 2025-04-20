@@ -1,0 +1,33 @@
+@import "~/.config/rofi/colour.rasi"
+
+
+window {
+    background-color: @background-colour;
+    border: 1px 1px 1px 0px solid;
+    border-color: @border-colour;
+    children: [ "listview" ];
+    location: west;
+    width: 70px;
+}
+
+listview {
+    background-color: transparent;
+    lines: 3;
+}
+
+element {
+    background-color: transparent;
+    padding: 17px 10px;
+}
+
+element-text {
+    font: "JetBrainsMono Nerd Font 24";
+    background-color: transparent;
+    horizontal-align: 0.6;
+    text-color: inherit;
+    cursor: pointer;
+}
+
+element selected.normal { text-color: @foreground-colour; }
+element normal.normal,
+element alternate.normal { text-color: @alternate-foreground; }

@@ -1,0 +1,62 @@
+(deflisten focused_ws
+    :initial "1"
+    "bash $HOME/.config/eww/scripts/focused_ws.sh"
+    ; "bash $HOME/.config/eww/scripts/sway_ws.sh"
+)
+; (deflisten focused_workspace
+;     :initial "i"
+;     "swaymsg -t get_workspaces | jq -r '.[] | select(.focused) | .num' && swaymsg -t subscribe '[ \"workspace\" ]' --monitor | while read; do swaymsg -t get_workspaces | jq -r '.[] | select(.focused) | .num'; done"
+; )
+(defvar workspaces "[1, 2, 3, 4, 5]")
+
+
+(defwidget workspace[]
+    (box
+        :space-evenly false
+        :halign "center"
+
+        (corner :side "l")
+
+        (box
+            :style "
+            border-radius: 100px 100px 0px 0px;
+            background-color: #283039;
+            padding: 0px 2em 0px 2em;
+            margin-top: 1px;
+            "
+
+            (bracket-box
+                (box
+                    :space-evenly false
+
+                    (for ws in workspaces
+                        (label
+                            :text "${ws - 1}"
+                            :style "
+                            ${
+                                ws == focused_ws
+                                ? "box-shadow: inset 0px -1px ${
+                                    EWW_BATTERY.BAT0.capacity > 40
+                                    ? "cyan"
+                                    : EWW_BATTERY.BAT0.capacity > 20 && EWW_BATTERY.BAT0.status != "Charging"
+                                        ? "yellow"
+                                        : EWW_BATTERY.BAT0.status != "Charging"
+                                            ? "red"
+                                            : "cyan"
+                                }"
+                                : ""
+                            };
+                            font-weight: ${ws != focused_ws ? "normal" : "bolder"};
+                            color: ${ws != focused_ws ? "#aaa" : "white"};
+                            transition: all .1s ease-in-out;
+                            min-width: 30px;
+                            "
+                        )
+                    )
+                )
+            )
+        )
+
+        (corner :side "r")
+    )
+)

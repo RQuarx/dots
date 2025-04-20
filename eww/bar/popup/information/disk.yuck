@@ -1,0 +1,13 @@
+(defwidget disk[]
+    (box :space-evenly false :halign "start" :valign "start" :orientation "v" :style "color: white; margin-right: 20px;"
+        (label :text "DISK" :halign "center" :style "font-weight: bolder;")
+        (progress 
+            :halign "center" 
+            :orientation "v" 
+            :flipped true 
+            :value "${EWW_DISK["/"].used_perc}"
+            :style "border-radius: 0px; margin: 3px 0px;"
+        )
+        (label :text "${round(EWW_DISK["/"].used_perc, 1)}%" :halign "center")
+    )
+)

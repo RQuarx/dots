@@ -1,0 +1,44 @@
+(deflisten volume :initial "0" "python /home/rquarx/.config/eww/bar/scripts/volume.py")
+(deflisten bright :initial "0" "python /home/rquarx/.config/eww/bar/scripts/brightness.py")
+(deflisten max_bright :initial "0" "brightnessctl m")
+
+(defwidget sound[]
+    (box :space-evenly false :halign "start"
+        ; (label :text " ${volume == 0 ? "󰝟" : (volume < 32 ? "󰕿" : (volume < 65 ? "󰖀" : (volume < 100 ? "󰕾" : "󱄠")))} " :style "font-size: 25px" :halign "start")
+        (label :text "Volume << ${volume}%${volume < 10 ? "  " : volume < 100 ? " " : ""}" :halign "center")
+        (scale
+            :class "pop-scale"
+            :marks "101"
+            :value "${volume}"
+            :max "151"
+            :min "0"
+            :onchange "amixer -D pulse sset Master {}%"
+            :round-digits 1
+            :halign "end"
+        )
+    )
+)
+
+(defwidget brightness[]
+    (box :space-evenly false :halign "start"
+        ; (label :text "${bright == 0 ? "󰃞 " : (bright < (50 / 100) * max_bright ? "󰃟 " : "󰃠 ")}" :style "font-size: 25px" :halign "start")
+        (label :text "Bright << ${round((bright / max_bright) * 100, 0)}%${(bright / max_bright) * 100 < 10 ? "  " : ((bright / max_bright) * 100 < 100 ? " " : "")}" :halign "center")
+        (scale
+            :class "pop-scale"
+            :value "${bright}"
+            :max "${max_bright + 1}"
+            :min "0"
+            :onchange "brightnessctl set {}"
+            :round-digits 1
+            :halign "end"
+        )
+    )
+)
+
+
+(defwidget sliders[]
+    (box :orientation "v" :space-evenly false :style "margin: 20px 0px 0px 50px;" :halign "end" :valign "center"
+        (sound)
+        (brightness)
+    )
+)

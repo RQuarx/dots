@@ -1,0 +1,79 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "display": {
+        "separator": "   ",
+        "color": { "output": "bright_", "keys": "cyan" }
+    },
+
+    "logo": {
+        "source": "~/.config/fastfetch/logo.txt",
+        "padding": { "top": 4, "left": 2 }
+    },
+
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "format": "            {6}{7}{8}"
+        },
+        "break",
+        {
+            "key": "{#bright_cyan}󰣇  distribution   ",
+            "keyColor": "cyan",
+            "type": "os",
+            "format": "{#bright_cyan}{3} {10}"
+        },
+        {
+            "key": "{#bright_white}┬  {#bright_cyan}├─{#dim_cyan} kernel     ",
+            "type": "kernel",
+            "format": "{1} {2}"
+        },
+        {
+            "key": "{#bright_white}│  {#bright_cyan}├─{#dim_cyan}󰌢 host       ",
+            "type": "host",
+            "format": "{2}"
+        },
+        {
+            "key": "{#bright_white}│  {#bright_cyan}├─{#dim_cyan}󰻠 CPU        ",
+            "type": "cpu",
+            "format": "{1}"
+        },
+        {
+            "key": "{#bright_white}│  {#bright_cyan}╰─{#dim_cyan}󰍛 GPU        ",
+            "type": "gpu",
+            "hideType": "integrated",
+            "format": "{1} {2}"
+        },
+        {
+            "type": "custom",
+            "format": "{#bright_white}┴"
+        },
+        {
+            "key": "{#bright_cyan}  window_manager ",
+            "type": "wm",
+            "keyColor": "cyan",
+            "format": "{#bright_cyan}{2} ({3})"
+        },
+        {
+            "key": "   {#bright_cyan}├─{#dim_cyan} terminal   ",
+            "type": "terminal",
+            "format": "{5}"
+        },
+        {
+            "key": "   {#bright_cyan}├─{#dim_cyan} package    ",
+            "type": "packages",
+            "format": "{2}"
+        },
+        {
+            "key": "   {#bright_cyan}╰─{#dim_cyan} shell      ",
+            "type": "shell",
+            "format": "{3}"
+        }
+        // {
+        //     "key": "    {#bright_cyan}╰─{#dim_cyan} Battery ",
+        //     "type": "battery",
+        //     "format": "{4}"
+        // }
+    ]
+}

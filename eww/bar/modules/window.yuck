@@ -1,0 +1,47 @@
+(deflisten active_window
+    :initial "None"
+    "bash $HOME/.config/eww/scripts/window.sh"
+)
+; (deflisten active_window
+;     :initial "null"
+;     "bash $HOME/.config/eww/scripts/sway_window.sh"
+; )
+; (deflisten active_window
+;     :initial "None"
+;     "while :; do echo $(swaymsg -t get_tree | jq -r \".. | select(.type?) | select(.focused==true).name\"); done"
+; )
+
+
+(defwidget window[]
+    (box
+        :space-evenly false
+
+        (box
+            :space-evenly false
+            :style "
+            border-radius: 0px 100px 0px 0px;
+            background-color: #283039;
+            padding-right: 2em;
+            margin-top: 1px;
+            "
+
+            (label
+                :text "Window"
+            )
+            (status-label
+                ; :text ""
+                :text ":"
+                :style "
+                font-weight: bolder;
+                margin-right: 1em;
+                "
+            )
+            (label
+                ; :text "${active_window == focused_ws ? "null" : active_window}"
+                :text "${active_window == "" ? "null" : active_window}"
+            )
+        )
+
+        (corner :side "r")
+    )
+)

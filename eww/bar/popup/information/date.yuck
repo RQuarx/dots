@@ -1,0 +1,16 @@
+(defwidget date[]
+    (box
+        :halign "start"
+        :valign "center"
+        :space-evenly false
+        :style "font-weight: bolder; margin-top: 50px"
+        (label 
+            :text "${formattime(EWW_TIME, "%A %d")}
+${formattime(EWW_TIME, "%B %Y")}
+${formattime(EWW_TIME, "%H:%M:%S")}"
+            :style "font-size: 25px;"
+            :valign "start"
+            :halign "start"
+        )
+    )
+)

@@ -1,0 +1,41 @@
+(defwidget ram_usage[]
+    (box
+        :xalign "start"
+        :yalign "start"
+
+        (circular-progress
+            :value {EWW_RAM.used_mem_perc}
+            :start-at 75
+            :thickness 5
+        )
+    )
+)
+
+
+(defwindow info
+    :monitor 0
+    :geometry (geometry :x "100px" :y "0" :width "30%" :height "50%" :anchor "center right")
+    :stacking "bottom"
+    :exclusive false
+
+    (box
+        ; :space-evenly false
+        :style "
+        background-color: black;
+        "
+
+        (ram_usage)
+        (graph
+            :value {EWW_CPU.avg}
+            :time-range 5
+            :max 100
+            :min 0
+            :line-style "round"
+
+            :style "
+            color: red;
+            background-color: white;
+            "
+        )
+    )
+)

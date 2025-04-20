@@ -1,0 +1,18 @@
+(deflisten ontime :initial "0" "python /home/rquarx/.config/eww/bar/scripts/ontime.py")
+
+
+(defwidget screentime[]
+    (box
+        :halign "start"
+        :valign "end"
+        :space-evenly false
+        :style "margin-top: 50px"
+        (label 
+            :show-truncated true
+            :text "up: ${ontime}"
+            :style "font-size: 15px;"
+            :valign "start"
+            :halign "start"
+        )
+    )
+)

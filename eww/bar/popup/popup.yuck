@@ -1,0 +1,65 @@
+(include "/home/rquarx/.config/eww/bar/popup/information/date.yuck")
+(include "/home/rquarx/.config/eww/bar/popup/information/disk.yuck")
+(include "/home/rquarx/.config/eww/bar/popup/information/swap.yuck")
+(include "/home/rquarx/.config/eww/bar/popup/information/ontime.yuck")
+(include "/home/rquarx/.config/eww/bar/popup/information/ram.yuck")
+
+(include "/home/rquarx/.config/eww/bar/popup/connection/buttons.yuck")
+(include "/home/rquarx/.config/eww/bar/popup/connection/sliders.yuck")
+
+
+(defwidget information[]
+    (box :space-evenly false :orientation "v"
+        (box :space-evenly true
+            (disk)
+            (swap)
+            (ram)
+        )
+        (date)
+        (screentime)
+    )
+)
+
+
+(defwidget connection[]
+    (box :space-evenly false :orientation "v" :halign "end"
+        (buttons)
+        (sliders)
+        (box :space-evenly false :halign "end" :style "margin-top: 50px;"
+            (label :text "Tray <<   " :halign "end")
+            (box :space-evenly false :halign "end" :style "
+                background-color: #3e3e3e;
+                border-radius: 7px;
+                min-width: 215px;
+            "
+                (systray
+                    :valign "end"
+                    :icon-size 25
+                    :class "tray"
+                    :spacing 10
+                )
+            )
+        )
+    )
+)
+
+
+(defwindow popup
+    :monitor 0
+    :geometry (geometry :x "0%" :y "-1px" :width "550px" :height "350px" :anchor "top center")
+    :stacking "fg"
+    :exclusive false
+
+    (eventbox :onhoverlost "${EWW_CMD} ${popup ? "close" : "open"} popup & ${EWW_CMD} update popup=${!popup}"
+        (box :space-evenly false
+            :style "
+                background-color: rgba(14, 14, 14, 1);
+                border: 1px solid cyan;
+                padding: 15px;
+            "
+
+            (information)
+            (connection)
+        )
+    )
+)

@@ -1,0 +1,13 @@
+(defwidget ram[]
+    (box :space-evenly false :halign "start" :valign "start" :orientation "v" :style "color: white;"
+        (label :text "RAM" :halign "center" :style "font-weight: bolder;")
+        (progress 
+            :halign "center" 
+            :orientation "v" 
+            :flipped true 
+            :value "${EWW_RAM.used_mem_perc}"
+            :style "border-radius: 0px; margin: 3px 0px;"
+        )
+        (label :text "${round(EWW_RAM.used_mem_perc, 1)}%" :halign "center")
+    )
+)

@@ -1,0 +1,110 @@
+(defvar dnd_active false)
+
+
+(defwidget wifi[]
+    (eventbox
+        :class "wifi"
+        :css "
+        .wifi {
+            transition: all .2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+            border: solid 1px cyan;
+            border-radius: 5px;
+        }
+        .wifi:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        "
+        (label 
+            :text " "
+            :style "
+                padding: 10px 40px; font-size: 18px;
+            "
+        )
+    )
+)
+
+(defwidget bluetooth[]
+    (eventbox
+        :class "bluetooth"
+        :css "
+        .bluetooth {
+            transition: all .2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+            border: solid 1px cyan;
+            border-radius: 5px;
+        }
+        .bluetooth:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        "
+        (label
+            :text ""
+            :style "
+                padding: 10px 40px;
+                font-size: 25px;
+            "
+        )
+    )
+)
+
+(defwidget dnd[]
+    (eventbox
+        :class "dnd ${dnd_active ? "active" : ""}"
+        :css "
+        .dnd {
+            transition: all .2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+            border: solid 1px cyan;
+            border-radius: 5px;
+        }
+        .dnd:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .dnd.active {
+            background-color: cyan;
+        }
+        "
+        :onclick "${EWW_CMD} update dnd_active=${!dnd_active} & dunstctl set-paused ${dnd_active}"
+        (label
+            :text "DND"
+            :style "
+                padding: 15px 13px; font-size: 25px; font-weight: bolder;
+                ${dnd_active ? "color: #0e0e0e" : ""}
+            "
+        )
+    )
+)
+
+(defwidget battery_saver[]
+    (eventbox
+        :class "battery-saver"
+        :css "
+        .battery-saver {
+            transition: all .2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+            border: solid 1px cyan;
+            border-radius: 5px;
+        }
+        .battery-saver:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        "
+        (label
+            :text "󱧦"
+            :style "
+                padding: 15px 13px; font-size: 25px;
+            "
+        )
+    )
+)
+
+
+(defwidget buttons[]
+    (box :space-evenly true :orientation "v" :halign "end" :spacing 10
+        (box :space-evenly true :spacing 10
+            (wifi)
+            (bluetooth)
+        )
+        (box :space-evenly true :spacing 10
+            (dnd)
+            (battery_saver)
+        )
+    )
+)

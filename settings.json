@@ -1,1 +1,239 @@
-/home/rquarx/.config/VSCodium/User/settings.json
+{
+    "[c]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace",
+        "editor.rulers": [ 80 ]
+    },
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace",
+        "editor.rulers": [ 80 ]
+    },
+    "workbench.colorTheme": "Horizon",
+    "window.title": "${activeEditorShort}",
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.renderWhitespace": "trailing",
+    "workbench.editor.enablePreview": false,
+    "editor.accessibilitySupport": "off",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingComments": "beforeWhitespace",
+    "editor.autoClosingQuotes": "always",
+    "editor.fontLigatures": true,
+    "diffEditor.codeLens": true,
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "right",
+    "workbench.tips.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+    "window.autoDetectHighContrast": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "window.restoreWindows": "none",
+    "window.density.editorTabHeight": "compact",
+    "window.enableMenuBarMnemonics": false,
+    "workbench.enableExperiments": false,
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.layoutControl.enabled": false,
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "alacritty",
+    "window.newWindowDimensions": "inherit",
+    "window.openFoldersInNewWindow": "off",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c99",
+    "editor.lineNumbers": "relative",
+    "editor.tokenColorCustomizations": {
+        "[Horizon]": {
+            "comments": "#5f5f5f",
+            "types": {
+                "fontStyle": "italic",
+                "foreground": "#00FFFF"
+            },
+            "keywords": {
+                "fontStyle": "italic",
+                "foreground": "#00FFFF"
+            },
+            "strings": {
+                "fontStyle": "italic"
+            },
+            "functions": {
+                "foreground": "#D34F6D"
+            },
+            "variables": "#D34F6D",
+            "textMateRules": [
+                {
+                    "scope": "variable",
+                    "settings": {
+                        "foreground": "#D34F6D"
+                    }
+                },
+                {
+                    "scope": "entity",
+                    "settings": {
+                        "foreground": "#00ffff",
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        }
+    },
+
+    "workbench.colorCustomizations": {
+        "[Horizon]": {
+            "editor.background": "#0E0E0E",
+            "sideBar.background": "#0E0E0E",
+            "sideBar.border": "#3E3E3E",
+            "titleBar.activeBackground": "#0E0E0E",
+            "titleBar.inactiveBackground": "#0E0E0E",
+            "editorCursor.foreground": "#00ffff",
+            "editorLineNumber.activeForeground": "#cccccc",
+            "editorLineNumber.foreground": "#555555",
+            "menu.background": "#0e0e0e",
+            "menu.border": "#00ffff",
+            "menu.separatorBackground": "#00ffff",
+            "menu.foreground": "#cccccc",
+            "menu.selectionForeground": "#ffffff",
+            "commandCenter.background": "#0e0e0e",
+            "dropdown.background": "#0e0e0e",
+            "commandCenter.border": "#00ffff",
+            "commandCenter.activeBackground": "#0e0e0e",
+            "editorWidget.background": "#0e0e0e",
+            "editorWidget.border": "#00ffff",
+            "input.background": "#0e0e0e00",
+            "input.border": "#00ffff",
+            "input.foreground": "#ffffff",
+
+            "terminal.ansiBlack": "#000000",
+            "terminal.ansiRed": "#CD0000",
+            "terminal.ansiGreen": "#00CD00",
+            "terminal.ansiYellow": "#CDCD00",
+            "terminal.ansiBlue": "#0000CD",
+            "terminal.ansiMagenta": "#CD00CD",
+            "terminal.ansiCyan": "#00CDCD",
+            "terminal.ansiWhite": "#FAEBD7",
+
+            "terminal.ansiBrightBlack": "#404040",
+            "terminal.ansiBrightRed": "#FF0000",
+            "terminal.ansiBrightGreen": "#00FF00",
+            "terminal.ansiBrightYellow": "#FFFF00",
+            "terminal.ansiBrightBlue": "#0000FF",
+            "terminal.ansiBrightMagenta": "#FF00FF",
+            "terminal.ansiBrightCyan": "#00FFFF",
+            "terminal.ansiBrightWhite": "#FFFFFF",
+
+            "terminal.foreground": "#FFFFFF",
+            "terminal.background": "#0E0E0E",
+
+            "terminalCursor.foreground": "#00FFFF",
+            "panel.background": "#0e0e0e",
+            "panel.dropBorder": "#0e0e0e",
+
+            "button.border": "#00FFFF",
+            "button.background": "#0e0e0e",
+
+            "statusBar.background": "#0e0e0e",
+            "statusBar.foreground": "#dddddd",
+            "statusBar.border": "#0e0e0e",
+            "editorGroup.border": "#00ffff",
+            "widget.border": "#00ffff",
+        }
+    },
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "outline",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.drawBoldTextInBrightColors": true,
+    "terminal.integrated.customGlyphs": true,
+    "editor.scrollbar.verticalScrollbarSize": 5,
+    "editor.scrollbar.horizontalScrollbarSize": 0,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorWidth": 2,
+    "editor.lightbulb.enabled": "off",
+    "editor.inlayHints.enabled": "onUnlessPressed",
+    "editor.guides.highlightActiveIndentation": "always",
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.bracketPairs": "active",
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "clangd.path": "/usr/bin/clangd",
+    "clangd.arguments": [
+        "--log=verbose",
+        "--pretty",
+        "--background-index",
+        "--header-insertion-decorators",
+        "--enable-config",
+        "--header-insertion=never"
+        // "-Iinc/"
+    ],
+    "editor.largeFileOptimizations": false,
+    "window.menuBarVisibility": "hidden",
+    "window.customTitleBarVisibility": "never",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": false,
+    "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": false,
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "update.showReleaseNotes": false,
+    "editor.linkedEditing": true,
+    "update.mode": "none",
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.activityBar.location": "bottom",
+    "workbench.editor.empty.hint": "hidden",
+    "git.autofetch": true,
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+    "C_Cpp.refactoring.includeHeader": "ifNeeded",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "explorer.confirmDelete": false,
+    "tws.highlightTrailingWhiteSpace": true,
+    "tws.trimOnSave": false,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "window.zoomLevel": 0.5,
+    "explorer.sortOrder": "type",
+    "explorer.compactFolders": false,
+    "explorer.sortOrderLexicographicOptions": "upper",
+    "explorer.sortOrderReverse": false,
+    "mesonbuild.downloadLanguageServer": true,
+    "mesonbuild.buildFolder": "target",
+    "mesonbuild.configureEnvironment": {
+        "CC": "clang",
+        "CXX": "clang++"
+    },
+    "mesonbuild.configureOnOpen": true,
+    "editor.stickyScroll.enabled": true,
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "window.commandCenter": false,
+    "window.customMenuBarAltFocus": false,
+    "window.dialogStyle": "custom",
+    "window.titleBarStyle": "native",
+    "chat.commandCenter.enabled": false,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "C_Cpp.simplifyStructuredComments": false,
+    "C_Cpp.doxygen.generatedStyle": "/**",
+    "C_Cpp.markdownInComments": "enabled",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.copilotHover": "disabled",
+    "C_Cpp.vcpkg.enabled": false,
+    "clangd.checkUpdates": true,
+    "clangd.inactiveRegions.useBackgroundHighlight": true,
+    "C_Cpp.autocomplete": "disabled",
+    "workbench.productIconTheme": "jetbrains-idea-product-icon-theme",
+    "workbench.editor.showTabs": "none",
+    "files.associations": {
+        "*.h": "c"
+    },
+    "editor.experimental.preferTreeSitter.css": true,
+}

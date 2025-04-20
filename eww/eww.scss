@@ -1,0 +1,64 @@
+* {  }
+
+window { all: unset; background-color: rgba(black, 0); }
+
+.bat-charging,
+.bat-warning,
+.bat-safe,
+.bat-bad {
+    all: unset;
+
+    highlight {
+        border: solid 1px #283039;
+        border-radius: 3px;
+        min-height: 10px;
+        min-width: 5px;
+    }
+
+    trough {
+        background-color: #283039;
+        border-radius: 4px;
+        min-height: 10px;
+        min-width: 32px;
+    }
+
+    slider { all: unset; }
+}
+
+
+.bat-charging {
+    highlight {
+        background-color: limegreen;
+    }
+
+    trough {
+        border: solid 1px cyan;
+    }
+}
+.bat-warning {
+    highlight {
+        background-color: yellow;
+    }
+
+    trough {
+        border: solid 1px yellow;
+    }
+}
+.bat-safe {
+    highlight {
+        background-color: #5d6f84;
+    }
+
+    trough {
+        border: solid 1px cyan;
+    }
+}
+.bat-bad {
+    highlight {
+        background-color: red;
+    }
+
+    trough {
+        border: solid 1px red;
+    }
+}

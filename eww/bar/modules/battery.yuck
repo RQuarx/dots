@@ -1,0 +1,80 @@
+(defwidget battery[]
+    (box
+        :space-evenly false
+        :style "
+        background-color: #283039;
+        padding: 0px 0.5em 0px 1em;
+        margin-top: 1px;
+        "
+
+        (box
+            :style "
+            border-radius: 1px 0px 0px 1px;
+            border-right: solid 1px black;
+            margin: 9px 0px 10px 0px;
+            background-color: ${
+                EWW_BATTERY.BAT0.capacity > 40
+                ? "cyan"
+                : EWW_BATTERY.BAT0.capacity > 20 && EWW_BATTERY.BAT0.status != "Charging"
+                    ? "yellow"
+                    : EWW_BATTERY.BAT0.status != "Charging"
+                        ? "red"
+                        : "cyan"
+            };
+            min-height: 0px;
+            padding: 2px;
+            "
+        )
+        (tooltip
+            (label :text "${EWW_BATTERY.BAT0.capacity}")
+            (overlay
+                (scale
+                    :orientation "h"
+                    :flipped true
+                    :value "${EWW_BATTERY.BAT0.capacity}"
+                    :class "bat-${
+                        EWW_BATTERY.BAT0.status == "Charging"
+                        ? "charging"
+                        : EWW_BATTERY.BAT0.capacity <= 20
+                            ? "bad"
+                            : EWW_BATTERY.BAT0.capacity <= 40
+                                ? "warning"
+                                : "safe"
+                    }"
+                )
+                (label
+                    :text "${EWW_BATTERY.BAT0.status == "Charging" ? "󱐋" : EWW_BATTERY.BAT0.capacity}"
+                    :yalign "0"
+                    :xalign "0.5"
+                    :style "
+                    margin: ${
+                        EWW_BATTERY.BAT0.status == "Charging"
+                        ? "0px 2px 0px 0px"
+                        : "4px 1px 0px 0px"
+                    };
+                    font-weight: 900;
+                    text-shadow:
+                        1px 0 black,
+                        -1px 0 black,
+                        0 1px black,
+                        0 -1px black,
+                        1px 1px black,
+                        -1px -1px black,
+                        1px -1px black,
+                        -1px 1px black;
+                    font-size:  ${
+                        EWW_BATTERY.BAT0.status == "Charging"
+                        ? "17px"
+                        : "12px"
+                    };
+                    color: ${
+                        EWW_BATTERY.BAT0.status == "Charging"
+                        ? "yellow"
+                        : "white"
+                    };
+                    "
+                )
+            )
+        )
+    )
+)

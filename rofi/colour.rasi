@@ -1,0 +1,13 @@
+* {
+    alternate-foreground:      #777777;
+    background-colour:         #0E0E0E;
+    foreground-colour:         #FFFFFF;
+    dim-foreground:            #CCCCCC;
+    border-colour:             #00FFFF;
+
+    background: #14181C;
+    alt-background: #283039;
+    accent: #00FFFF;
+    foreground: #FFFFFF;
+    alt-foreground: #777777;
+}

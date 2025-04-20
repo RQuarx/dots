@@ -1,0 +1,41 @@
+(defvar popup_open false)
+
+(defwidget clock[]
+    (box
+        :space-evenly false
+        :style "
+        background-color: #283039;
+        padding: 0px 1em 0px 1em;
+        margin-top: 1px;
+        "
+
+        (button
+            :style "
+            padding: 0px;
+            margin: 0px;
+            "
+            :onclick "${EWW_CMD} ${popup_open ? "close" : "open"} popup && ${EWW_CMD} update popup_open=${!popup_open}"
+
+            (bracket-box
+                (box
+                    :space-evenly false
+                    :orientation "v"
+
+                    (label
+                        :text "${formattime(EWW_TIME, "%H:%M")}"
+                        :style "
+                        font-size: 12px;
+                        "
+                    )
+                    (label
+                        :text "${formattime(EWW_TIME, "%A")}"
+                        :style "
+                        font-size: 12px;
+                        margin-top: -7px;
+                        "
+                    )
+                )
+            )
+        )
+    )
+)

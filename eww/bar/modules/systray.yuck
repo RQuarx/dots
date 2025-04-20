@@ -1,0 +1,20 @@
+(defwidget system_tray[]
+    (box
+        :space-evenly false
+
+        (corner :side "l")
+
+        (bracket-box
+            :style "
+            border-radius: 100px 0px 0px 0px;
+            padding-left: 2em;
+            margin-top: 1px;
+            "
+
+            (systray
+                :icon-size 15
+                :spacing 7
+            )
+        )
+    )
+)

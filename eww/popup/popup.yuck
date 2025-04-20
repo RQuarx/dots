@@ -1,0 +1,105 @@
+(deflisten notifications
+    :initial "[\"body\":\"No notifications\"]"
+    "bash $HOME/.config/eww/scripts/notification.sh"
+)
+
+
+(defwindow popup
+    :monitor 0
+    :geometry (geometry :x "5px" :y "5px" :width "576px" :height "635px" :anchor "bottom left")
+    :stacking "fg"
+    :exclusive false
+
+    (box
+        :space-evenly false
+        :orientation "h"
+        :style "
+        background-color: #0E1215;
+        border: 1px solid cyan
+        "
+
+        (box
+            :active true
+            :width 350
+            :orientation "v"
+            :style "
+            background-color: #283039;
+            border-radius: 15px 0px 15px 15px;
+            margin: 5px 0px 5px 5px;
+            "
+
+            (scroll
+                :style "margin: 3px 0px 3px 0px;"
+
+                (box
+                    :space-evenly false
+                    :orientation "v"
+
+                    (for n in notifications
+                        (box
+                            :space-evenly false
+                            :style "
+                            margin: 5px;
+                            border-radius: 15px;
+                            background-color: #0E1215;
+                            padding-left: 10px;
+                            "
+
+                            (image
+                                :path "${n.icon_path.data == "" ? "/usr/share/icons/Tela-circle-black-dark/32/status/dialog-information.svg" : n.icon_path.data}"
+                                :image-width 30
+                            )
+                            (label
+                                :markup "${n.message.data}"
+                                :style "padding: 10px;"
+                            )
+                        )
+                    )
+                )
+            )
+        )
+        (box
+            :orientation "v"
+            :space-evenly false
+
+            (box
+                :width 225
+                :valign "start"
+                :height 590
+                :style "
+                background-color: #283039;
+                border-radius: 0px 15px 15px 0px;
+                margin: 5px 5px 0px 0px;
+                "
+            )
+            (box
+                :valign "end"
+                :halign "start"
+                :width 25
+                :height 20
+                :orientation "h"
+                :style "
+                border-radius: 75% 0px 0px 0px;
+                box-shadow: -5px -5px #283039;
+                background-color: transparent;
+                margin-top: 0px;
+                "
+            )
+            (box
+                :space-evenly false
+                :valign "start"
+                :halign "start"
+                :style "
+                margin-top: -10px;
+                margin-left: 10px;
+                "
+
+                (label :text "Updates")
+                (status-label :text ":" :style "margin-right: 1em;")
+                (label :text "${update_amount} pkgs")
+            )
+
+        )
+        ; (corners)
+    )
+)

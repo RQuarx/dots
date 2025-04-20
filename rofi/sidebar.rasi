@@ -1,0 +1,62 @@
+@import "./colour.rasi"
+
+
+window {
+    background-color: @background;
+    children: [ "listview", "inputbar" ];
+    border: 1px solid;
+    border-color: @accent;
+
+    location: southwest;
+    y-offset: -2px;
+    padding: 0px;
+    // height: ;
+    width: 17%;
+}
+
+
+inputbar {
+    children: [ "prompt", "entry" ];
+
+    background-color: @alt-background;
+    border-radius: 5px;
+    padding: 3px 7px;
+    margin: 3px;
+}
+prompt {
+    color: @accent;
+}
+entry {
+    cursor-width: 1px;
+    cursor-color: @accent;
+    placeholder: "search";
+}
+
+
+listview {
+    scrollbar: false;
+    reverse: true;
+    margin: 0px 15px 15px 15px;
+    border: 0px;
+}
+element {
+    background-color: @alt-background;
+    border-radius: 15px;
+    color: @foreground;
+    padding: 3px 7px;
+    margin: 3px;
+}
+
+element normal.normal,
+element normal.active,
+element alternate.active,
+element alternate.normal {
+    color: @alt-foreground;
+    background-color: @alt-background;
+}
+element selected.active,
+element selected.normal {
+    text-color: @foreground;
+    background-color: @alt-background;
+    border-color: @border-colour;
+}

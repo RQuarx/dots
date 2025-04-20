@@ -1,0 +1,48 @@
+@import "~/.config/rofi/colour.rasi"
+
+window {
+    background-color: @background-colour;
+    children: [ "inputbar", "listview" ];
+    border: 1px 0px 0px 0px solid;
+    border-color: @border-colour;
+    orientation: horizontal;
+    location: south;
+    padding: 0px;
+    width: 100%;
+}
+
+
+inputbar { children: [ "entry", "prompt" ]; }
+entry {
+    text-color: @dim-foreground;
+    placeholder: "";
+    margin: 8px;
+    width: 7%;
+}
+prompt {
+    padding: 8px 0px 10px 7px;
+    color: @border-colour;
+}
+
+
+
+listview {
+    layout: horizontal;
+    border: 0px;
+}
+element {
+    text-color: @foreground-colour;
+    margin: 8px;
+}
+
+element normal.normal,
+element alternate.normal {
+    text-color: @alternate-foreground;
+    background-color: transparent;
+}
+element selected.normal {
+    text-color: @foreground-colour;
+    background-color: transparent;
+    border: 0px 0px 1px 0px solid;
+    border-color: @border-colour;
+}

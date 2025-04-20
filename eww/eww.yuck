@@ -1,0 +1,85 @@
+; (include "/home/rquarx/.config/eww/bar/popup/popup.yuck")
+; (include "/home/rquarx/.config/eww/bar/bar.yuck")
+(include "/home/rquarx/.config/eww/bar/bar.yuck")
+(include "/home/rquarx/.config/eww/popup/popup.yuck")
+(include "/home/rquarx/.config/eww/info/info.yuck")
+; (include "/home/rquarx/.config/eww/status_bar/bar.yuck")
+; (include "/home/rquarx/.config/eww/popup_window/main.yuck")
+; (include "/home/rquarx/.config/eww/osd/osd.yuck")
+; (include "/home/rquarx/.config/eww/launcher/launcher.yuck")
+; (include "/home/rquarx/.config/eww/on_screen_display/bright.yuck")
+(defpoll update_amount :interval "5m" :initial "0" "checkupdates | wc -l")
+
+
+(defwidget status-label[text ?style]
+    (label
+        :text text
+        :style "
+        color: ${
+            EWW_BATTERY.BAT0.capacity > 40
+            ? "cyan"
+            : EWW_BATTERY.BAT0.capacity > 20 && EWW_BATTERY.BAT0.status != "Charging"
+                ? "yellow"
+                : EWW_BATTERY.BAT0.status != "Charging"
+                    ? "red"
+                    : "cyan"
+        };
+        ${style}
+        "
+    )
+)
+
+(defwidget bracket-box[?style]
+    (box
+		:space-evenly false
+        :style "
+        background-color: #283039;
+        ${style}
+        "
+
+        (status-label
+            :text "{"
+            :style "
+            font-weight: bolder;
+            margin-right: 5px;
+            "
+        )
+        (children)
+        (status-label
+            :text "}"
+            :style "
+            font-weight: bolder;
+            margin-left: 5px;
+            "
+        )
+	)
+)
+
+(defwidget corner[side ?margin]
+    (box
+        :width 50
+        :style "
+        border-radius: 0px 0px ${
+            side == "l" || side == "left"
+            ? "75% 0px"
+            : "0px 75%"
+        };
+        box-shadow: ${side == "l" || side == "left" ? "" : "-"}7px 13px #283039;
+        background-color: transparent;
+        margin-bottom: 3px;
+        margin-${side == "l" || side == "left" ? "right" : "left"}: ${margin == "" ? "-7px" : margin};
+        "
+    )
+)
+
+(defwindow wallpaper
+    :monitor 0
+    :geometry (geometry :x "0" :y "0" :width "100%" :height "100%" :anchor "center")
+    :stacking "bg"
+    :exclusive false
+
+    (image
+        :path "/home/rquarx/Pictures/DarkerBackground.jpg"
+        :image-width 2200
+    )
+)
